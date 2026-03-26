@@ -1,0 +1,280 @@
+.st0,
+.st1,
+.st2,
+.st3,
+.st4,
+.st5 {
+   fill: none;
+}
+
+.st6 {
+   fill: #009757;
+}
+
+.st1 {
+   stroke-miterlimit: 3.9;
+}
+
+.st1,
+.st2,
+.st3,
+.st4,
+.st5 {
+   stroke: #767676;
+   stroke-width: 0.5px;
+}
+
+.st7,
+.st8,
+.st9,
+.st10,
+.st11 {
+   fill-rule: evenodd;
+   stroke: none;
+}
+
+.st7,
+.st12 {
+   fill: #fff;
+   stroke: none;
+}
+
+.st13 {
+   font-family: Helvetica-Bold, Helvetica;
+   font-size: 6.5px;
+   font-weight: 700;
+}
+
+.st13,
+.st14,
+.st8,
+.st15,
+.st16 {
+   fill: #1d1d1b;
+   stroke: none;
+}
+
+.st13,
+.st14,
+.st17,
+.st16 {
+   isolation: isolate;
+}
+
+.st2,
+.st4,
+.st5 {
+   stroke-linejoin: round;
+}
+
+.st14 {
+   font-size: 6.6px;
+}
+
+.st14,
+.st16 {
+   font-family: Helvetica, Helvetica;
+}
+
+.st18 {
+   fill: #a7dbf5;
+}
+
+.st19 {
+   clip-path: url(#clippath-1);
+}
+
+.st9,
+.st10,
+.st20 {
+   fill: #0067ac;
+   stroke: none;
+}
+
+.st11,
+.st21 {
+   fill: #e30613;
+}
+
+.st16 {
+   font-size: 6px;
+}
+
+.st4 {
+   stroke-dasharray: 1.2 1.2;
+}
+
+.st4,
+.st5 {
+   stroke-linecap: round;
+}
+
+.st22 {
+   clip-path: url(#clippath);
+}
+
+.wrapper-plano {
+   max-width: 1500px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 38em 0 0 0;
+   overflow: hidden;
+
+   .size-plano {
+      @media (max-width: 600px) {
+         width: 200%;
+         margin-left: -35px;
+         margin-top: -40px;
+      }
+   }
+}
+
+// Modales
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(26, 32, 48, 0.93);
+
+   .wrapper-modal {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* Contenido del modal */
+      .modal-content {
+         background-color: #fefefe;
+         border-radius: 20px;
+         overflow: hidden;
+         display: none;
+
+         max-width: 1000px;
+         margin: 2em;
+
+         .title-close {
+            width: 100%;
+            line-height: 2.2;
+            background-color: #0067ac;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            p {
+               font-size: 1.5em;
+               width: 100%;
+               text-align: center;
+               color: white;
+               margin: 0 3em;
+
+               @media (max-width: 500px) {
+                  text-align: inherit;
+                  margin-left: 30px;
+               }
+            }
+
+            .close {
+               color: white;
+               font-size: 35px;
+               font-weight: bold;
+               cursor: pointer;
+               position: absolute;
+               right: 20px;
+               transition: all 0.3s;
+
+               &:hover {
+                  transform: rotate(180deg);
+               }
+            }
+         }
+
+         .wrapper-marcas {
+            margin: 2em;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @media (max-width: 1100px) {
+               margin: 3em;
+            }
+
+            @media (max-width: 900px) {
+               margin: 1em;
+            }
+
+            @media (max-width: 736px) {
+               margin: 0;
+               flex-wrap: inherit;
+               overflow-x: scroll;
+               justify-content: flex-start;
+               gap: 0;
+            }
+
+            .img-logotipo {
+               width: 180px;
+               padding: 1em;
+               box-shadow: 10px 0 13px #e0e0e0;
+               border-radius: 20px;
+
+               @media (max-width: 500px) {
+                  margin: 1em 0;
+                  box-shadow: inherit;
+               }
+            }
+         }
+      }
+   }
+}
+
+.animateIn {
+   animation: slideIn 0.6s forwards;
+}
+
+.animateOut {
+   animation: slideOut 0.6s forwards;
+}
+
+@keyframes slideIn {
+   from {
+      transform: translateY(-300%);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes slideOut {
+   from {
+      transform: translateY(0);
+      opacity: 1;
+   }
+
+   to {
+      transform: translateY(-300%);
+      opacity: 0;
+   }
+}
+
+.animation-box {
+   cursor: pointer;
+   animation: boxIffa2025 1.5s linear infinite alternate;
+}
+
+@keyframes boxIffa2025 {
+   0% {
+      transform: translateY(5px);
+   }
+
+   100% {
+      transform: translateY(0px);
+   }
+}
